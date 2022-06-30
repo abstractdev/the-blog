@@ -1,0 +1,13 @@
+@use './reset';
+@use './font-face';
+$text-primary: #130c21;
+$text-secondary: #888;
+$color-primary: #9dd9d2;
+$color-secondary: #ead548;
+$bg-primary: #fff;
+
+:root {
+  font-family: 'sen', sans-serif;
+  background-color: $bg-primary;
+  color: $text-primary;
+}
