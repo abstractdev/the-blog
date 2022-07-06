@@ -1,0 +1,7 @@
+@use "../../sass/mixins" as *;
+.main {
+  @include vFlex;
+  flex: 1;
+  padding: 1rem;
+  @include mq-padding;
+}
