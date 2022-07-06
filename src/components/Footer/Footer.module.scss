@@ -1,0 +1,14 @@
+@use "../../sass/mixins" as *;
+
+.footer {
+  @include hFlex;
+  margin-top: auto;
+  padding-bottom: 1rem;
+  > a {
+    @include hFlex;
+    gap: 0.25rem;
+  }
+  > a > img {
+    width: 32px;
+  }
+}
