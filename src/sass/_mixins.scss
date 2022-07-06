@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 @mixin hFlex {
   display: flex;
   justify-content: center;
@@ -7,4 +9,28 @@
 @mixin vFlex {
   @include hFlex;
   flex-direction: column;
+}
+
+@mixin ellipsify {
+  display: -webkit-box;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin mq-padding {
+  @media screen and (min-width: 1000px) {
+    padding: 1rem 6rem;
+  }
+}
+
+@mixin outlined {
+  background-color: $color-secondary;
+  border: 1px solid $color-dark;
+  cursor: pointer;
+  &:hover {
+    background-color: $color-dark;
+    color: $color-secondary;
+  }
 }

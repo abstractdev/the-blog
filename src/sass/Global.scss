@@ -1,13 +1,33 @@
-@use './reset';
-@use './font-face';
-$text-primary: #130c21;
-$text-secondary: #888;
-$color-primary: #9dd9d2;
-$color-secondary: #ead548;
-$bg-primary: #fff;
-
+@use "./reset";
+@use "./font-face";
+@use "./mixins" as *;
+@use "./variables" as *;
 :root {
-  font-family: 'sen', sans-serif;
-  background-color: $bg-primary;
+  font-family: "sen", sans-serif;
   color: $text-primary;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  letter-spacing: .1em;
+}
+
+form {
+  border-radius: 12px;
+}
+
+input {
+  padding: .5rem;
+}
+
+.hFlex {
+  @include hFlex;
+}
+
+.vFlex {
+  @include vFlex;
 }
