@@ -1,0 +1,38 @@
+@use "../../sass/mixins" as *;
+@use "../../sass/variables" as *;
+
+.header {
+  @include hFlex;
+  justify-content: space-between;
+  padding: 1rem;
+  @include mq-padding;
+}
+
+.blog-name {
+  letter-spacing: normal;
+  font-weight: 800;
+  transition: 1s ease-in-out;
+  &:hover {
+    color: $color-secondary;
+  }
+}
+
+.login-link {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.signup-link {
+  background-color: $color-secondary;
+  padding: 1rem;
+  border-radius: 12px;
+  &:hover {
+    filter: brightness(80%);
+  }
+}
+
+.nav {
+  @include hFlex;
+  gap: 1rem;
+}
