@@ -16,11 +16,15 @@ p, h1, h2, h3, h4, h5, h6 {
   letter-spacing: .1em;
 }
 
+h2 {
+  text-shadow: 2px 2px $color-secondary;
+}
+
 form {
   border-radius: 12px;
 }
 
-input {
+input, textarea {
   padding: .5rem;
 }
 

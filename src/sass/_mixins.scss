@@ -34,3 +34,16 @@
     color: $color-secondary;
   }
 }
+
+@mixin icon-container {
+  position: relative;
+  cursor: default;
+  >span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $color-secondary;
+    border-radius: 50%;
+    padding: .05rem;
+  }
+}
