@@ -35,3 +35,7 @@ input, textarea {
 .vFlex {
   @include vFlex;
 }
+
+.light-text {
+  color: $text-secondary;
+}
