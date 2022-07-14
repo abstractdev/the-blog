@@ -1,0 +1,92 @@
+@use "../../sass/mixins" as *;
+@use "../../sass/variables" as *;
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  border: 8px solid $color-dark;
+  background-color: $color-primary;
+  border-radius: 4px;
+  max-height: 100%;
+  > a > img {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  border-top: 8px solid $color-dark;
+}
+
+.top-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-text {
+  display: flex;
+  gap: 0.75rem;
+  color: $text-secondary;
+}
+
+.comment {
+  width: 32px;
+  height: 100%;
+}
+
+.title {
+  line-height: 1;
+  max-width: 100%;
+  @include ellipsify;
+  -webkit-line-clamp: 2;
+  &:hover {
+    color: $color-secondary;
+    text-shadow: 3px 3px $text-primary;
+  }
+}
+
+.name {
+  display: flex;
+  color: $text-secondary;
+}
+
+.text-content {
+  line-height: 1.5;
+  height: 60%;
+  max-width: 100%;
+  @include ellipsify;
+  -webkit-line-clamp: 10;
+}
+
+.icon-container {
+  @include hFlex;
+  gap: 12px;
+}
+
+.comment-container {
+  @include icon-container;
+}
+
+.link-content {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.readmore-link {
+  display: flex;
+  align-items: center;
+  @include outlined;
+  padding: 0.5rem;
+  &:after {
+    content: "\000A0 \027A1";
+  }
+}
