@@ -1,0 +1,38 @@
+@use "../../sass/mixins" as *;
+@use "../../sass/variables" as *;
+
+.comment-form-card {
+  @include vFlex;
+  background-color: $color-primary;
+  padding: 1rem;
+  gap: 1rem;
+  border: 8px solid $color-dark;
+  @media screen and (min-width: 640px) {
+    padding: 2rem;
+  }
+}
+
+.header {
+  font-weight: 900;
+  align-self: flex-start;
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.comment-button {
+  @include outlined;
+  padding: 1rem;
+  align-self: flex-start;
+}
