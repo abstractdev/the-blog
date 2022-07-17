@@ -1,0 +1,49 @@
+@use "../../sass/mixins" as *;
+@use "../../sass/variables" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-top: 8px solid $color-dark;
+  border-right: 8px solid $color-dark;
+  border-left: 8px solid $color-dark;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  background-color: $gray1;
+  padding: 0 1rem;
+}
+
+.create-category-button {
+  // border: 1px solid $color-dark;
+  border: none;
+  background-color: $color-primary;
+  border-radius: 8px;
+  padding: 1rem;
+  cursor: pointer;
+  width: 50%;
+  align-self: center;
+  margin: 1rem 0;
+}
+
+.category {
+  display: flex;
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  border: none;
+  width: 50%;
+  > div > input {
+    width: 100%;
+  }
+}
+
+.submit {
+  @include outlined;
+  width: 25%;
+  padding: 0 1rem;
+}
