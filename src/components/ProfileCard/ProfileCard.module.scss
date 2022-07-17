@@ -1,0 +1,118 @@
+@use "../../sass/mixins" as *;
+@use "../../sass/variables" as *;
+
+.profile-card {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  > .btn-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    // padding: 0 1rem;
+    font-size: 0.75rem;
+    background-color: $color-secondary;
+    border: 8px solid $color-dark;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    @media screen and (min-width: 640px) {
+      font-size: 1rem;
+    }
+  }
+  > div > button {
+    flex: 1;
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+    background-color: $color-secondary;
+    &:hover {
+      filter: brightness(80%);
+    }
+    &:focus {
+      filter: brightness(60%);
+    }
+  }
+}
+
+.profile-icon {
+  height: 100%;
+}
+
+.link-container {
+  @include hFlex;
+  gap: 1rem;
+  font-size: 0.75rem;
+  @media screen and (min-width: 640px) {
+    font-size: 1rem;
+  }
+}
+
+.create,
+.view {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+  background-color: $color-dark;
+  color: $gray1;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.content-container {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.username-container {
+  width: 100%;
+  @include hFlex;
+  gap: 0.25rem;
+  padding-bottom: 1rem;
+  cursor: default;
+}
+
+.comments-container,
+.liked-posts-container,
+.liked-comments-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  border-left: 8px solid $color-dark;
+  border-right: 8px solid $color-dark;
+  border-bottom: 8px solid $color-dark;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  background-color: $color-primary;
+  > h3 {
+    border-bottom: 8px solid $color-dark;
+    padding: 1rem;
+  }
+  > div,
+  .blogpost-link {
+    padding: 0.5rem 1rem;
+  }
+}
+
+.liked-posts-container {
+  align-items: center;
+}
+
+.blogpost-link {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.liked-comments,
+.comment-history {
+  padding: 0.5rem 1rem;
+  line-height: 1.25;
+}
