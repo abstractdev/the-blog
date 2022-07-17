@@ -34,6 +34,7 @@ The front-end for my full stack blog.</br>Built with TypeScript/React/SASS</br>
 ## Built With
 
 - Typescript
+- React
 - SASS
 - Iconify Icons
 - React Router
