@@ -19,7 +19,7 @@ function BlogCard(props: PropsInterface) {
             <main className={styles["main-content"]}>
               <div className={styles["top-content"]}>
                 <div className={styles["top-text"]}>
-                  <span>{e.categories[0].name}</span>
+                  {e.categories[0] && <span>{e.categories[0].name}</span>}
                   <span>➤</span>
                   <span>{formatDate(e.created_at)}</span>
                 </div>
