@@ -1,0 +1,49 @@
+@use "../../sass/mixins" as *;
+@use "../../sass/variables" as *;
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  border: 8px solid $color-dark;
+  border-radius: 4px;
+  background-color: $color-primary;
+  width: 100%;
+  padding: 1rem;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  > div > span {
+    color: $text-secondary;
+    align-self: bottom;
+  }
+}
+
+.header {
+  padding: 1rem 0;
+  align-self: flex-start;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.date {
+  display: none;
+  @media screen and (min-width: 640px) {
+    display: contents;
+  }
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
