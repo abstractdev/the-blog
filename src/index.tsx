@@ -12,6 +12,8 @@ import AuthorSignup from "./pages/AuthorSignup/AuthorSignup";
 import AuthorCreate from "./pages/AuthorCreate/AuthorCreate";
 import AuthorView from "./pages/AuthorView/AuthorView";
 import AuthorEdit from "./pages/AuthorEdit/AuthorEdit";
+import ProtectedUser from "./components/Protected/ProtectedUser";
+import ProtectedAuthor from "./components/Protected/ProtectedAuthor";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -26,10 +28,38 @@ root.render(
           <Route path="/signup/user" element={<UserSignup />} />
           <Route path="/signup/author" element={<AuthorSignup />} />
           <Route path="/:blogpostTitle" element={<Blogpost />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/author/create" element={<AuthorCreate />} />
-          <Route path="/author/edit/:blogpostTitle/:blogpostId" element={<AuthorEdit />} />
-          <Route path="/author/view" element={<AuthorView />} />
+          <Route
+            path="/profile"
+            element={
+              <ProtectedUser>
+                <Profile />
+              </ProtectedUser>
+            }
+          />
+          <Route
+            path="/author/create"
+            element={
+              <ProtectedAuthor>
+                <AuthorCreate />
+              </ProtectedAuthor>
+            }
+          />
+          <Route
+            path="/author/edit/:blogpostTitle/:blogpostId"
+            element={
+              <ProtectedAuthor>
+                <AuthorEdit />
+              </ProtectedAuthor>
+            }
+          />
+          <Route
+            path="/author/view"
+            element={
+              <ProtectedAuthor>
+                <AuthorView />
+              </ProtectedAuthor>
+            }
+          />
         </Route>
       </Routes>
     </BrowserRouter>
