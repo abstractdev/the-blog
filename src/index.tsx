@@ -20,7 +20,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/the-blog">
       <Routes>
         <Route element={<App />}>
           <Route path="/" element={<Home />} />
