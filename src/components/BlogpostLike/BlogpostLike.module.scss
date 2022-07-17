@@ -1,0 +1,19 @@
+@use "../../sass/mixins" as *;
+@use "../../sass/variables" as *;
+
+.like-container {
+  @include icon-container;
+  @include like-container;
+}
+
+.like {
+  width: 32px;
+  height: 100%;
+}
+
+.error {
+  @include error;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, 0);
+}
