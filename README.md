@@ -3,7 +3,8 @@
 # [![The Blog](./blog.png)](https://abstractdev.github.io/the-blog/)
 
 [Live Demo](https://abstractdev.github.io/the-blog/)</br>
-The front-end for my full stack blog.</br>Built with TypeScript/React/SASS
+The front-end for my full stack blog.</br>Built with TypeScript/React/SASS</br>
+[Backend repo](https://github.com/abstractdev/the-blog-backend)
 
 ---
 
