@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/the-blog/static/css/main.836b66ab.css",
+    "main.js": "/the-blog/static/js/main.a7e9399c.js",
+    "static/media/Sen-Bold.otf": "/the-blog/static/media/Sen-Bold.251716c9bec4727e4f78.otf",
+    "static/media/Sen-ExtraBold.otf": "/the-blog/static/media/Sen-ExtraBold.e4825befe08d846ebfb0.otf",
+    "static/media/Sen-Regular.otf": "/the-blog/static/media/Sen-Regular.333894fb886c395aa4d5.otf",
+    "index.html": "/the-blog/index.html",
+    "main.836b66ab.css.map": "/the-blog/static/css/main.836b66ab.css.map",
+    "main.a7e9399c.js.map": "/the-blog/static/js/main.a7e9399c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.836b66ab.css",
+    "static/js/main.a7e9399c.js"
+  ]
+}
