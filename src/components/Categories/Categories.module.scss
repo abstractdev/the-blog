@@ -1,0 +1,60 @@
+@use "../../sass/mixins" as *;
+@use "../../sass/variables" as *;
+
+.category-container {
+  @include hFlex;
+  justify-content: space-between;
+  background-color: $gray1;
+  color: $text-secondary;
+  padding: 1rem;
+  @include mq-padding;
+}
+.category-links {
+  @include hFlex;
+  justify-content: flex-start;
+  gap: 12px;
+  > a {
+    &:hover {
+      filter: brightness(50%);
+    }
+  }
+}
+
+.category-dropdown-container {
+  @extend .category-links;
+  gap: 0.25rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.category-dropdown {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 220%;
+  left: -20%;
+}
+
+.category-dropdown-link {
+  background-color: $gray1;
+  padding-left: 1.4rem;
+  padding-right: 4rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  z-index: 2;
+  &:hover {
+    filter: brightness(50%);
+  }
+}
+
+.category-button {
+  border: none;
+  background: none;
+  color: $text-secondary;
+  cursor: pointer;
+}
+
+.test-container {
+  display: flex;
+  gap: 0.5rem;
+}
