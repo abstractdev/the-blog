@@ -1,0 +1,25 @@
+@use "../../sass/mixins" as *;
+@use "../../sass/variables" as *;
+
+.form-card {
+  @include form;
+  max-height: 22rem;
+}
+
+.big {
+  @extend .form-card;
+  max-height: 30rem;
+}
+
+.title {
+  cursor: default;
+}
+
+.submit {
+  @include outlined;
+  width: 50%;
+}
+
+.form-error {
+  color: red;
+}
