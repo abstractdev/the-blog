@@ -30,6 +30,7 @@ input, textarea {
 
 .hFlex {
   @include hFlex;
+  gap: .25rem;
 }
 
 .vFlex {
