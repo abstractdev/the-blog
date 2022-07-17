@@ -1,0 +1,20 @@
+@use "../../sass/mixins" as *;
+@use "../../sass/variables" as *;
+
+.test-account-button {
+  display: flex;
+  align-content: center;
+  background-color: $color-dark;
+  color: $gray1;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  gap: 0.25rem;
+}
+
+.icon {
+  top: 0.125em;
+  position: relative;
+}
