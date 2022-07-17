@@ -1,0 +1,16 @@
+@use "../../sass/mixins" as *;
+@use "../../sass/variables" as *;
+
+.like-container,
+.dislike-container {
+  @include like-container;
+}
+
+.like {
+  vertical-align: text-top;
+}
+
+.error {
+  @include error;
+  right: 0;
+}
