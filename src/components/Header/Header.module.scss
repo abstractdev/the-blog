@@ -17,22 +17,59 @@
   }
 }
 
-.login-link {
+.login-link,
+.profile-link {
   &:hover {
     text-decoration: underline;
   }
 }
 
-.signup-link {
+.signup-link,
+.logout-link {
+  display: flex;
+  justify-content: center;
   background-color: $color-secondary;
   padding: 1rem;
   border-radius: 12px;
+  width: 100%;
   &:hover {
     filter: brightness(80%);
+    z-index: 3;
   }
 }
 
 .nav {
   @include hFlex;
   gap: 1rem;
+}
+
+.signup-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  background-color: $color-secondary;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.dropdown-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  gap: 0.5rem;
+  top: 50%;
+  width: 100%;
+  padding: 2rem 1rem;
+  z-index: 3;
+  animation: height 0.5s ease-in-out;
+}
+@keyframes height {
+  from {
+    top: 0;
+  }
+  to {
+    top: 50%;
+  }
 }
