@@ -1,0 +1,32 @@
+@use "../../sass/mixins" as *;
+@use "../../sass/variables" as *;
+
+.form {
+  @include form;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  display: grid;
+  place-items: center;
+}
+
+.submit {
+  @include outlined;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
