@@ -1,6 +1,7 @@
 # The Blog
 
-# [![The Blog](./blog.png)](https://abstractdev.github.io/the-blog/)
+# [The Blog](https://abstractdev.github.io/the-blog/)
+https://user-images.githubusercontent.com/97710625/183008277-8c173fee-c8ea-4642-8bd6-13c9f5fc0397.mp4
 
 [Live Demo](https://abstractdev.github.io/the-blog/)</br>
 The front-end for my full stack blog.</br>Built with TypeScript/React/SASS</br>
@@ -41,7 +42,7 @@ The front-end for my full stack blog.</br>Built with TypeScript/React/SASS</br>
 
 ## Concepts / Things I learned
 
-- Using scss modules
+- Using SCSS modules
 - SASS mixins/partials
 - Media query custom hook implementation
 - Context API
