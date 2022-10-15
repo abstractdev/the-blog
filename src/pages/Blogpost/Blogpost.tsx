@@ -5,7 +5,6 @@ import BlogpostCard from "../../components/BlogpostCard/BlogpostCard";
 import CommentFormCard from "../../components/CommentFormCard/CommentFormCard";
 import Comments from "../../components/Comments/Comments";
 import { CommentsArrayType } from "../../interfaces/Comments";
-
 function Blogpost() {
   const [comments, setComments] = useState<CommentsArrayType | null>(null);
   const [blogpostId, setBlogpostId] = useState("");

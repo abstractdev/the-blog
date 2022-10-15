@@ -96,12 +96,17 @@ function BlogForm(props: PropsInterface) {
   function handleDeleteOnClick(event: React.MouseEvent, categoryId: string) {
     event.preventDefault();
     (async () => {
-      await fetch(`https://the-blog-backend.onrender.com/category/${categoryId}`, {
-        method: "DELETE",
-        credentials: "include",
-      });
+      await fetch(
+        `https://the-blog-backend.onrender.com/category/${categoryId}`,
+        {
+          method: "DELETE",
+          credentials: "include",
+        }
+      );
       // const resData = await res.json();
-      const response = await fetch("https://the-blog-backend.onrender.com/category");
+      const response = await fetch(
+        "https://the-blog-backend.onrender.com/category"
+      );
       const categories = await response.json();
       setCategoriesData!(categories);
     })();

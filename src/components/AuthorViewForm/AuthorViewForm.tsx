@@ -16,32 +16,41 @@ function AuthorViewForm(props: PropsInterface) {
       switch (event.target.dataset.name) {
         case "yes":
           (async () => {
-            await fetch(`https://the-blog-backend.onrender.com/blog/${blogpostId}`, {
-              method: "PUT",
-              credentials: "include",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({ is_published: true }),
-            });
+            await fetch(
+              `https://the-blog-backend.onrender.com/blog/${blogpostId}`,
+              {
+                method: "PUT",
+                credentials: "include",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ is_published: true }),
+              }
+            );
             resetBlogpostState();
           })();
           break;
         case "no":
           (async () => {
-            await fetch(`https://the-blog-backend.onrender.com/blog/${blogpostId}`, {
-              method: "PUT",
-              credentials: "include",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({ is_published: false }),
-            });
+            await fetch(
+              `https://the-blog-backend.onrender.com/blog/${blogpostId}`,
+              {
+                method: "PUT",
+                credentials: "include",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ is_published: false }),
+              }
+            );
             resetBlogpostState();
           })();
           break;
         case "delete":
           (async () => {
-            await fetch(`https://the-blog-backend.onrender.com/blog/${blogpostId}`, {
-              method: "DELETE",
-              credentials: "include",
-            });
+            await fetch(
+              `https://the-blog-backend.onrender.com/blog/${blogpostId}`,
+              {
+                method: "DELETE",
+                credentials: "include",
+              }
+            );
             resetBlogpostState();
           })();
           break;

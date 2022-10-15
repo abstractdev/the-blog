@@ -46,12 +46,15 @@ function FormCard(props: PropsInterface) {
         username: userFormData.username,
         password: userFormData.password,
       };
-      const res = await fetch("https://the-blog-backend.onrender.com/users/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        credentials: "include",
-        body: JSON.stringify(loginData),
-      });
+      const res = await fetch(
+        "https://the-blog-backend.onrender.com/users/login",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          credentials: "include",
+          body: JSON.stringify(loginData),
+        }
+      );
       const resData = await res.json();
       if (resData.message === "Incorrect Username or Password") {
         setValidationError(resData.message);
