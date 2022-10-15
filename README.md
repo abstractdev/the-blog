@@ -1,5 +1,3 @@
-# The Blog
-
 # [The Blog](https://abstractdev.github.io/the-blog/)
 https://user-images.githubusercontent.com/97710625/183008277-8c173fee-c8ea-4642-8bd6-13c9f5fc0397.mp4
 
