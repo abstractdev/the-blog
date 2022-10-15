@@ -19,7 +19,7 @@ function TestAccountButton(props: PropsInterface) {
       loginData.username = "TestUser";
       loginData.password = "testuser";
     }
-    await fetch("https://a-blog-api.herokuapp.com/users/login", {
+    await fetch("https://the-blog-backend.onrender.com/users/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       credentials: "include",

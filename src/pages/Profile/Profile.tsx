@@ -6,7 +6,7 @@ function Profile() {
   const { user, setUser } = useContext(AuthContext);
   useEffect(() => {
     (async () => {
-      const res = await fetch("https://a-blog-api.herokuapp.com/users", {
+      const res = await fetch("https://the-blog-backend.onrender.com/users", {
         method: "GET",
         credentials: "include",
       });

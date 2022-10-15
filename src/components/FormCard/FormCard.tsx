@@ -35,7 +35,7 @@ function FormCard(props: PropsInterface) {
         passwordConfirmation: userFormData.passwordConfirmation,
         role: "user",
       };
-      await fetch("https://a-blog-api.herokuapp.com/users/signup", {
+      await fetch("https://the-blog-backend.onrender.com/users/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(signupData),
@@ -46,7 +46,7 @@ function FormCard(props: PropsInterface) {
         username: userFormData.username,
         password: userFormData.password,
       };
-      const res = await fetch("https://a-blog-api.herokuapp.com/users/login", {
+      const res = await fetch("https://the-blog-backend.onrender.com/users/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
@@ -68,7 +68,7 @@ function FormCard(props: PropsInterface) {
         passwordConfirmation: userFormData.passwordConfirmation,
         role: "author",
       };
-      await fetch("https://a-blog-api.herokuapp.com/users/signup", {
+      await fetch("https://the-blog-backend.onrender.com/users/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(signupData),

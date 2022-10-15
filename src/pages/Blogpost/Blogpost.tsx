@@ -17,7 +17,7 @@ function Blogpost() {
   useEffect(() => {
     (async () => {
       const res = await fetch(
-        `https://a-blog-api.herokuapp.com/blog/${blogpostTitle}`
+        `https://the-blog-backend.onrender.com/blog/${blogpostTitle}`
       );
       const resData = await res.json();
       setBlogpostData(resData);

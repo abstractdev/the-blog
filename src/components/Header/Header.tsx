@@ -16,7 +16,7 @@ function Header(props: PropsInterface) {
 
   function handleLogOut() {
     (async () => {
-      await fetch("https://a-blog-api.herokuapp.com/users/logout", {
+      await fetch("https://the-blog-backend.onrender.com/users/logout", {
         method: "POST",
         credentials: "include",
       });

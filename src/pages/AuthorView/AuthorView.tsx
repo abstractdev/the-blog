@@ -16,7 +16,7 @@ function AuthorView() {
   useEffect(() => {
     (async () => {
       //fetch all blogposts
-      const res = await fetch("https://a-blog-api.herokuapp.com/blog");
+      const res = await fetch("https://the-blog-backend.onrender.com/blog");
       const resData = await res.json();
       const filtered = resData?.filter(
         (e: BlogDataInterface) => e.user_id === user.id

@@ -26,7 +26,7 @@ function BlogForm(props: PropsInterface) {
     if (formName === "authorEditForm") {
       (async () => {
         const res = await fetch(
-          `https://a-blog-api.herokuapp.com/blog/${blogpostTitle}`
+          `https://the-blog-backend.onrender.com/blog/${blogpostTitle}`
         );
         const resData = await res.json();
         setAuthorBlogData({
@@ -37,7 +37,7 @@ function BlogForm(props: PropsInterface) {
       })();
     }
     (async () => {
-      const res = await fetch("https://a-blog-api.herokuapp.com/category");
+      const res = await fetch("https://the-blog-backend.onrender.com/category");
       const resData = await res.json();
       setCategoriesData(resData);
     })();
@@ -70,14 +70,14 @@ function BlogForm(props: PropsInterface) {
       categoryIds: [...filtered],
     };
     if (formName === "authorCreateForm") {
-      await fetch("https://a-blog-api.herokuapp.com/blog", {
+      await fetch("https://the-blog-backend.onrender.com/blog", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
         body: JSON.stringify(formData),
       });
     } else if (formName === "authorEditForm") {
-      await fetch(`https://a-blog-api.herokuapp.com/blog/${blogpostId}`, {
+      await fetch(`https://the-blog-backend.onrender.com/blog/${blogpostId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
@@ -96,12 +96,12 @@ function BlogForm(props: PropsInterface) {
   function handleDeleteOnClick(event: React.MouseEvent, categoryId: string) {
     event.preventDefault();
     (async () => {
-      await fetch(`https://a-blog-api.herokuapp.com/category/${categoryId}`, {
+      await fetch(`https://the-blog-backend.onrender.com/category/${categoryId}`, {
         method: "DELETE",
         credentials: "include",
       });
       // const resData = await res.json();
-      const response = await fetch("https://a-blog-api.herokuapp.com/category");
+      const response = await fetch("https://the-blog-backend.onrender.com/category");
       const categories = await response.json();
       setCategoriesData!(categories);
     })();
