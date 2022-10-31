@@ -15,7 +15,7 @@ function CommentLike(props: PropsInterface) {
     (async () => {
       //fetch single comment
       const res = await fetch(
-        `https://the-blog-backend.onrender.com/comment/${blogpostId}`
+        `https://a-blog-api3.herokuapp.com/comment/${blogpostId}`
       );
       const resData = await res.json();
       resData.forEach((e: any) => {
@@ -35,7 +35,7 @@ function CommentLike(props: PropsInterface) {
     (async () => {
       //fetch single comment
       const res = await fetch(
-        `https://the-blog-backend.onrender.com/comment/single/${commentId}`
+        `https://a-blog-api3.herokuapp.com/comment/single/${commentId}`
       );
       const resData = await res.json();
       //find an existing like instance
@@ -50,7 +50,7 @@ function CommentLike(props: PropsInterface) {
       if (targetId === "commentLike" && !likedEntry && user.isLoggedIn) {
         (async () => {
           await fetch(
-            `https://the-blog-backend.onrender.com/commentLike/${commentId}`,
+            `https://a-blog-api3.herokuapp.com/commentLike/${commentId}`,
             {
               method: "POST",
               credentials: "include",
@@ -71,7 +71,7 @@ function CommentLike(props: PropsInterface) {
         //if it exists, delete it
         (async () => {
           await fetch(
-            `https://the-blog-backend.onrender.com/commentLike/${commentId}`,
+            `https://a-blog-api3.herokuapp.com/commentLike/${commentId}`,
             {
               method: "DELETE",
               credentials: "include",
@@ -92,7 +92,7 @@ function CommentLike(props: PropsInterface) {
     (async () => {
       //fetch single comment
       const res = await fetch(
-        `https://the-blog-backend.onrender.com/comment/single/${commentId}`
+        `https://a-blog-api3.herokuapp.com/comment/single/${commentId}`
       );
       const resData = await res.json();
       //set qt of likes

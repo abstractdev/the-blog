@@ -18,14 +18,14 @@ function CategoryCreate(props: PropsInterface) {
       return;
     }
     (async () => {
-      await fetch("https://the-blog-backend.onrender.com/category", {
+      await fetch("https://a-blog-api3.herokuapp.com/category", {
         method: "POST",
         credentials: "include",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name: categoryName }),
       });
       const response = await fetch(
-        "https://the-blog-backend.onrender.com/category"
+        "https://a-blog-api3.herokuapp.com/category"
       );
       const categories = await response.json();
       setCategoryData!(categories);

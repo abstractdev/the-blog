@@ -17,7 +17,7 @@ function AuthorViewForm(props: PropsInterface) {
         case "yes":
           (async () => {
             await fetch(
-              `https://the-blog-backend.onrender.com/blog/${blogpostId}`,
+              `https://a-blog-api3.herokuapp.com/blog/${blogpostId}`,
               {
                 method: "PUT",
                 credentials: "include",
@@ -31,7 +31,7 @@ function AuthorViewForm(props: PropsInterface) {
         case "no":
           (async () => {
             await fetch(
-              `https://the-blog-backend.onrender.com/blog/${blogpostId}`,
+              `https://a-blog-api3.herokuapp.com/blog/${blogpostId}`,
               {
                 method: "PUT",
                 credentials: "include",
@@ -45,7 +45,7 @@ function AuthorViewForm(props: PropsInterface) {
         case "delete":
           (async () => {
             await fetch(
-              `https://the-blog-backend.onrender.com/blog/${blogpostId}`,
+              `https://a-blog-api3.herokuapp.com/blog/${blogpostId}`,
               {
                 method: "DELETE",
                 credentials: "include",
@@ -63,7 +63,7 @@ function AuthorViewForm(props: PropsInterface) {
   function resetBlogpostState() {
     (async () => {
       //fetch all blogposts
-      const res = await fetch("https://the-blog-backend.onrender.com/blog");
+      const res = await fetch("https://a-blog-api3.herokuapp.com/blog");
       const resData = await res.json();
       setAuthorBlogpostData!(
         resData?.filter((e: BlogDataInterface) => e.user_id === user.id)

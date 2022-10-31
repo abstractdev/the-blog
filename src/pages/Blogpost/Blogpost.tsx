@@ -16,7 +16,7 @@ function Blogpost() {
   useEffect(() => {
     (async () => {
       const res = await fetch(
-        `https://the-blog-backend.onrender.com/blog/${blogpostTitle}`
+        `https://a-blog-api3.herokuapp.com/blog/${blogpostTitle}`
       );
       const resData = await res.json();
       setBlogpostData(resData);

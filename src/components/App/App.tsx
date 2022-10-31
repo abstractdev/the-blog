@@ -23,7 +23,7 @@ function App(props: PropsInterface) {
 
   useEffect(() => {
     (async () => {
-      const res = await fetch("https://the-blog-backend.onrender.com/users", {
+      const res = await fetch("https://a-blog-api3.herokuapp.com/users", {
         method: "GET",
         credentials: "include",
       });
@@ -33,7 +33,7 @@ function App(props: PropsInterface) {
       }
     })();
     (async () => {
-      const res = await fetch("https://the-blog-backend.onrender.com/category");
+      const res = await fetch("https://a-blog-api3.herokuapp.com/category");
       const resData = await res.json();
       setCategoryData(resData);
     })();
@@ -41,7 +41,7 @@ function App(props: PropsInterface) {
   useEffect(() => {
     (async () => {
       //fetch all blogposts
-      const res = await fetch("https://the-blog-backend.onrender.com/blog");
+      const res = await fetch("https://a-blog-api3.herokuapp.com/blog");
       const resData = await res.json();
       //filter for published posts
       const filtered = resData.filter((e: BlogDataInterface) => e.is_published);

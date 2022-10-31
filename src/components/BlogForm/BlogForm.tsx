@@ -26,7 +26,7 @@ function BlogForm(props: PropsInterface) {
     if (formName === "authorEditForm") {
       (async () => {
         const res = await fetch(
-          `https://the-blog-backend.onrender.com/blog/${blogpostTitle}`
+          `https://a-blog-api3.herokuapp.com/blog/${blogpostTitle}`
         );
         const resData = await res.json();
         setAuthorBlogData({
@@ -37,7 +37,7 @@ function BlogForm(props: PropsInterface) {
       })();
     }
     (async () => {
-      const res = await fetch("https://the-blog-backend.onrender.com/category");
+      const res = await fetch("https://a-blog-api3.herokuapp.com/category");
       const resData = await res.json();
       setCategoriesData(resData);
     })();
@@ -70,14 +70,14 @@ function BlogForm(props: PropsInterface) {
       categoryIds: [...filtered],
     };
     if (formName === "authorCreateForm") {
-      await fetch("https://the-blog-backend.onrender.com/blog", {
+      await fetch("https://a-blog-api3.herokuapp.com/blog", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
         body: JSON.stringify(formData),
       });
     } else if (formName === "authorEditForm") {
-      await fetch(`https://the-blog-backend.onrender.com/blog/${blogpostId}`, {
+      await fetch(`https://a-blog-api3.herokuapp.com/blog/${blogpostId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
@@ -97,7 +97,7 @@ function BlogForm(props: PropsInterface) {
     event.preventDefault();
     (async () => {
       await fetch(
-        `https://the-blog-backend.onrender.com/category/${categoryId}`,
+        `https://a-blog-api3.herokuapp.com/category/${categoryId}`,
         {
           method: "DELETE",
           credentials: "include",
@@ -105,7 +105,7 @@ function BlogForm(props: PropsInterface) {
       );
       // const resData = await res.json();
       const response = await fetch(
-        "https://the-blog-backend.onrender.com/category"
+        "https://a-blog-api3.herokuapp.com/category"
       );
       const categories = await response.json();
       setCategoriesData!(categories);

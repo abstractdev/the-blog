@@ -15,7 +15,7 @@ function BlogpostLike(props: PropsInterface) {
   useEffect(() => {
     (async () => {
       const res = await fetch(
-        `https://the-blog-backend.onrender.com/blog/${blogpostTitle}`
+        `https://a-blog-api3.herokuapp.com/blog/${blogpostTitle}`
       );
       const resData = await res.json();
       setBlogpostLikesQt(resData?.blogpost_likes?.length);
@@ -31,7 +31,7 @@ function BlogpostLike(props: PropsInterface) {
     (async () => {
       // fetch single blogpost
       const res = await fetch(
-        `https://the-blog-backend.onrender.com/blog/${blogpostTitle}`
+        `https://a-blog-api3.herokuapp.com/blog/${blogpostTitle}`
       );
       const resData = await res.json();
       // check if blogpost's userid matches userid to prevent author from liking own post
@@ -47,7 +47,7 @@ function BlogpostLike(props: PropsInterface) {
       if (likedEntry && user.isLoggedIn) {
         (async () => {
           await fetch(
-            `https://the-blog-backend.onrender.com/blogpostLike/${blogpostId}`,
+            `https://a-blog-api3.herokuapp.com/blogpostLike/${blogpostId}`,
             {
               method: "DELETE",
               credentials: "include",
@@ -60,7 +60,7 @@ function BlogpostLike(props: PropsInterface) {
       } else if (!likedEntry && user.isLoggedIn) {
         (async () => {
           const res = await fetch(
-            `https://the-blog-backend.onrender.com/blogpostLike/${blogpostId}`,
+            `https://a-blog-api3.herokuapp.com/blogpostLike/${blogpostId}`,
             {
               method: "POST",
               credentials: "include",

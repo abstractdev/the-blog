@@ -28,7 +28,7 @@ function CommentFormCard(props: PropsInterface) {
   async function handleSubmit(event: React.FormEvent) {
     event.preventDefault();
     if (user.isLoggedIn) {
-      await fetch("https://the-blog-backend.onrender.com/comment", {
+      await fetch("https://a-blog-api3.herokuapp.com/comment", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -41,7 +41,7 @@ function CommentFormCard(props: PropsInterface) {
       });
     }
     if (!user.isLoggedIn) {
-      await fetch("https://the-blog-backend.onrender.com/comment", {
+      await fetch("https://a-blog-api3.herokuapp.com/comment", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -54,7 +54,7 @@ function CommentFormCard(props: PropsInterface) {
       });
     }
     const blogpost = await fetch(
-      `https://the-blog-backend.onrender.com/blog/${blogpostTitle}`,
+      `https://a-blog-api3.herokuapp.com/blog/${blogpostTitle}`,
       { method: "GET" }
     );
     const blogpostData = await blogpost.json();
